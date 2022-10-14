@@ -1,8 +1,8 @@
-import {baseUrl} from '/src/scripts/variables.js'
+import {baseUrl} from '../variables.js'
 
-async function repositories (userName) {
-    const response = await fetch(`${baseUrl}/${userName}/repos`)
-    return await response.json()
+async function getRepositories (userName) {
+    const response = await fetch (`${baseUrl}/${userName}/repos`)
+    return await response.json ()
 }
 
-export {repositories}
+export {getRepositories}
