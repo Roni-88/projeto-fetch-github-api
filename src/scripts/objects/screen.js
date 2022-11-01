@@ -2,22 +2,21 @@ const screen = {
     userProfile: document.querySelector ('.profile-data'),
     renderUser (user) {
         this.userProfile.innerHTML = `<div class="info">
-                            <img src="${user.avatarUrl}" alt="Foto do perfil do usuário"/>    
-                            <div class="data">
-                                <h1>${user.name ?? 'Não possui nome cadastrado 😢'}</h1>
-                                <p>${user.bio ?? 'Não possui bio cadastrada 😢'}</p>
-                            </div>
-                            <div class="counters">
-                                <div class="followers">
-                                    <h4>👥 Seguidores</h4>
-                                    <span>${user.followers}</span>
-                                </div>
-                                <div class="following">
-                                    <h4>👥 Seguindo</h4>
-                                    <span>${user.following}</span>
-                                </div>
-                            </div>
-                        </div>`
+                                          <img src="${user.avatarUrl}" alt="Foto do perfil do usuário">    
+                                          <div class="data">
+                                              <h1>${user.name ?? 'Não possui nome cadastrado 😢'}</h1>
+                                              <p>${user.bio ?? 'Não possui bio cadastrada 😢'}</p>
+                                          </div>
+                                          <div class="counters">
+                                          <div class="followers" id="followers">
+                                              <a href="https://github.com/Roni-88?tab=followers" target="_blank"><h4>👥 Seguidores</h4></a>
+                                              <a href="https://github.com/Roni-88?tab=followers" target="_blank"><span>${user.followers}</span>
+                                          </div>
+                                          <div class="following" id="following">
+                                              <a href="https://github.com/Roni-88?tab=following" target="_blank"><h4>👥 Seguindo</h4></a>
+                                              <a href="https://github.com/Roni-88?tab=following" target="_blank"><span>${user.following}</span>
+                                          </div>
+                                      </div>`
         
         if (user.repositories.length > 0) {
             let repositoriesItems = ''
@@ -29,9 +28,9 @@ const screen = {
                 <i class="language">👩‍💻 ${repo.language ?? 'Sem linguagem'}</i>
                 </a></li>`)
             this.userProfile.innerHTML += `<div class="repositories section">
-                                            <h2>Repositórios</h2>
-                                            <ul>${repositoriesItems}</ul>
-                                            </div>`
+                                              <h2>Repositórios ${user.public_repos}</h2>
+                                              <ul>${repositoriesItems}</ul>
+                                           </div>`
         }
 
         if (user.events.length > 0) {            
@@ -49,8 +48,8 @@ const screen = {
             })
 
             this.userProfile.innerHTML += `<div class="events section">
-                                            <h2>Atividades</h2>
-                                            <ul>${eventsItems}</ul>
+                                              <h2>Atividades</h2>
+                                              <ul>${eventsItems}</ul>
                                            </div>` 
         }
     },

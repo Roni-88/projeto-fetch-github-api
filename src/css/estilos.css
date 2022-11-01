@@ -130,7 +130,8 @@ main {
   
   .container .profile-data .counters {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 40px;
     flex-wrap: wrap;
     width: 100%;
     margin-top: 70px;  
@@ -142,21 +143,46 @@ main {
     font-size: 25px;
     font-weight: 700;
   }
+
+  .container .profile-data .counters h4:hover {
+    color: rgb(157, 161, 237);
+    transition: 0.2s ease-in-out;
+  }
   
   .container .profile-data .counters span {
     color: white;
     padding: 15px;
     border-radius: 50%;
     font-weight: 700;
+    font-size: 30px;
+    width: 200px;
     display: block;
   }
   
   .container .profile-data .counters .followers span {
+    background-color: #fff;
+    color: rgb(37, 118, 232);
+    border: 2px solid rgb(37, 118, 232);
+  }
+
+  .container .profile-data .counters .followers span:hover {
     background-color: rgb(37, 118, 232);
+    color: #fff;
+    box-shadow: 0px 2px 15px rgb(37, 118, 232);
+    transition: 0.3s ease-in-out;
   }
   
   .container .profile-data .counters .following span {
+    background-color: #fff;
+    color: rgb(37, 118, 232);
+    border: 2px solid rgb(37, 118, 232); 
+  }
+
+  .container .profile-data .counters .following span:hover {
     background-color: rgb(37, 118, 232);
+    color: #fff;
+    box-shadow: 0px 2px 15px rgb(37, 118, 232);
+    transition: 0.3s ease-in-out;
   }
   
   /* REPOSITÓRIOS */
@@ -181,7 +207,6 @@ main {
     border-radius: 7px;
     transition: 0.3s ease-in-out;
     color: rgb(37, 118, 232);
-    
   }
   
   .container .profile-data .repositories ul li a:hover {
