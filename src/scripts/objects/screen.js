@@ -6,15 +6,17 @@ const screen = {
                                           <div class="data">
                                               <h1>${user.name ?? 'Não possui nome cadastrado 😢'}</h1>
                                               <p>${user.bio ?? 'Não possui bio cadastrada 😢'}</p>
+                                              <p>${user.company ?? 'Não possui empresa cadastrada 😢'}</p>
+                                              <p>${user.location ?? 'Não possui localização cadastrada 😢'}</p>
                                           </div>
                                           <div class="counters">
-                                          <div class="followers" id="followers">
-                                              <a href="https://github.com/Roni-88?tab=followers" target="_blank"><h4>👥 Seguidores</h4></a>
-                                              <a href="https://github.com/Roni-88?tab=followers" target="_blank"><span>${user.followers}</span>
+                                          <div class="followers">
+                                              <a href="${user.followers_url}"><h4>👥 Seguidores</h4></a>
+                                              <a href="${user.followers_url}"><span>${user.followers}</span>
                                           </div>
-                                          <div class="following" id="following">
-                                              <a href="https://github.com/Roni-88?tab=following" target="_blank"><h4>👥 Seguindo</h4></a>
-                                              <a href="https://github.com/Roni-88?tab=following" target="_blank"><span>${user.following}</span>
+                                          <div class="following">
+                                              <a href="${user.following_url}"><h4>👥 Seguindo</h4></a>
+                                              <a href="${user.following_url}"><span>${user.following}</span>
                                           </div>
                                       </div>`
         
@@ -28,7 +30,7 @@ const screen = {
                 <i class="language">👩‍💻 ${repo.language ?? 'Sem linguagem'}</i>
                 </a></li>`)
             this.userProfile.innerHTML += `<div class="repositories section">
-                                              <h2>Repositórios ${user.public_repos}</h2>
+                                              <h2>Repositórios (${user.public_repos})</h2>
                                               <ul>${repositoriesItems}</ul>
                                            </div>`
         }
