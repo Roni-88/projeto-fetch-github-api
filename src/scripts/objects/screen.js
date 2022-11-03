@@ -11,12 +11,12 @@ const screen = {
                                           </div>
                                           <div class="counters">
                                           <div class="followers">
-                                              <a href="${user.followers_url}"><h4>👥 Seguidores</h4></a>
-                                              <a href="${user.followers_url}"><span>${user.followers}</span>
+                                              <a href="https://github.com/${user.userName}?tab=followers"><h4>👥 Seguidores</h4></a>
+                                              <a href="https://github.com/${user.userName}?tab=followers"><span>${user.followers}</span>
                                           </div>
                                           <div class="following">
-                                              <a href="${user.following_url}"><h4>👥 Seguindo</h4></a>
-                                              <a href="${user.following_url}"><span>${user.following}</span>
+                                              <a href="https://github.com/${user.userName}?tab=following"><h4>👥 Seguindo</h4></a>
+                                              <a href="https://github.com/${user.userName}?tab=following"><span>${user.following}</span>
                                           </div>
                                       </div>`
         
