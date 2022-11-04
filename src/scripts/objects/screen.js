@@ -1,3 +1,6 @@
+// import {getEvents} from '/src/services/events'
+// console.log (getEvents)
+
 const screen = {
     userProfile: document.querySelector ('.profile-data'),
     renderUser (user) {
