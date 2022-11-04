@@ -1,5 +1,5 @@
-// import {getEvents} from '/src/services/events'
-// console.log (getEvents)
+import {user} from '/src/scripts/objects/user.js'
+import {numberOfEvents} from '/src/scripts/variables.js'
 
 const screen = {
     userProfile: document.querySelector ('.profile-data'),
@@ -60,7 +60,7 @@ const screen = {
     },
     renderNotFound () {
         this.userProfile.innerHTML = '<h3>Usuário não encontrado.</h3>'
-    }
+    },
 }
 
 export {screen}

@@ -40,5 +40,20 @@ async function getUserData (userName) {
     user.setInfo (userResponse)
     user.setRepositories (repositoriesResponse)
     user.setEvents (eventsResponse)
-    screen.renderUser (user)
+    screen.renderUser (user)   
 }
+
+async function showEvents (userName) {
+    console.log(userName)
+    const url = `https://api.github.com/users/${userName}/events?per_page=${numberOfEvents}`
+
+    // "https://api.github.com/users/Roni-88/events{/privacy}"
+
+    const response = await fetch (url)
+    const json = await response.json ()
+    console.log(json)
+
+    screen.showEvents (userName)
+} 
+
+export {showEvents}
