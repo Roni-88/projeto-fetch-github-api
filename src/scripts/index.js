@@ -4,6 +4,7 @@ import {getEvents} from './services/events.js'
 
 import {user} from '/src/scripts/objects/user.js'
 import {screen} from '/src/scripts/objects/screen.js'
+import {numberOfEvents} from '/src/scripts/variables.js'
 
 document.getElementById ('btn-search').addEventListener ('click', () => {
     const userName = document.getElementById ('input-search').value
