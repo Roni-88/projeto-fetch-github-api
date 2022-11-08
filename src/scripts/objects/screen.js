@@ -41,7 +41,6 @@ const screen = {
         
         if (user.events.length > 0) {            
             let eventsItems = ''
-
             user.events.forEach(event => {
                 if (event.payload) {
                     if (event.payload.commits) {
@@ -55,7 +54,7 @@ const screen = {
 
         this.userProfile.innerHTML += `<div class="events">
                                         <h2>Eventos<h2>
-                                        <ul>${eventsItems ?? 'Sem eventos 🥶'}</ul>
+                                        <ul>${eventsItems}</ul>
                                       </div>` 
         }
     },
